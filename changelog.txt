@@ -1,3 +1,9 @@
+[B]Version 0.1.5 - WIP[/B]
+Add Gotham compatibility
+Change id to script.mxlinux.wifimanager
+Change name to WIFI Manager
+Update summary/description
+
 [B]Version 0.1.4[/B]
 Check for dbus and nm on init
 
