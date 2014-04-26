@@ -15,14 +15,14 @@
 			<height>420</height>
 			<texture border="40">DialogBack.png</texture>
 		</control>
-		<control type="image">
+		<!-- control type="image">
 			<posx>80</posx>
 			<posy>10</posy>
 			<width>640</width>
 			<height>90</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>GlassTitleBar.png</texture>
-		</control>
+		</control -->
 		<control type="button">
 			<description>Close Window button</description>
 			<posx>710</posx>
@@ -44,7 +44,7 @@
 			<description>header label</description>
 			<label>$ADDON[script.linux.nm 627]</label>
 			<posx>20</posx>
-			<posy>18</posy>
+			<posy>30</posy>
 			<width>760</width>
 			<height>30</height>
 			<font>font13_title</font>
@@ -137,7 +137,7 @@
 		<control type="list" id="10">
 			<visible>true</visible>
 			<posx>30</posx>
-			<posy>67</posy>
+			<posy>80</posy>
 			<width>500</width>
 			<height>201</height>
 			<onup>60</onup>
@@ -296,7 +296,7 @@
 		</control>
 		<control type="scrollbar" id="60">
 			<posx>555</posx>
-			<posy>105</posy>
+			<posy>80</posy>
 			<width>25</width>
 			<height>200</height>
 			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
@@ -311,7 +311,7 @@
 		</control>
 		<control type="group" id="9000">
 			<posx>580</posx>
-			<posy>67</posy>
+			<posy>80</posy>
 			<control type="button" id="13">
 				<description>refresh</description>
 				<label>$ADDON[script.linux.nm 630]</label>

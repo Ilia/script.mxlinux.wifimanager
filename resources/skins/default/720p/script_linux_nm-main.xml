@@ -15,14 +15,14 @@
 			<height>420</height>
 			<texture border="40">DialogBack.png</texture>
 		</control>
-		<control type="image">
+		<!-- control type="image">
 			<posx>80</posx>
 			<posy>10</posy>
 			<width>640</width>
 			<height>90</height>
 			<aspectratio>stretch</aspectratio>
 			<texture>GlassTitleBar.png</texture>
-		</control>
+		</control -->
 		<control type="button">
 			<description>Close Window button</description>
 			<posx>710</posx>
@@ -44,7 +44,7 @@
 			<description>header label</description>
 			<label>$ADDON[script.linux.nm 626]</label>
 			<posx>20</posx>
-			<posy>18</posy>
+			<posy>30</posy>
 			<width>760</width>
 			<height>30</height>
 			<font>font13_title</font>
@@ -137,7 +137,7 @@
 		<control type="list" id="10">
 			<visible>true</visible>
 			<posx>30</posx>
-			<posy>67</posy>
+			<posy>80</posy>
 			<width>500</width>
 			<height>201</height>
 			<onup>9001</onup>
@@ -300,7 +300,7 @@
 		</control>
 		<control type="scrollbar" id="60">
 			<posx>555</posx>
-			<posy>67</posy>
+			<posy>80</posy>
 			<width>25</width>
 			<height>200</height>
 			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
@@ -315,10 +315,10 @@
 		</control>
 		<control type="group" id="9000">
 			<posx>580</posx>
-			<posy>67</posy>
-			<control type="button" id="14">
-				<description>Add Connection button</description>
-				<label>$ADDON[script.linux.nm 621]</label>
+			<posy>80</posy>
+			<control type="button" id="13">
+				<description>Disconnect button</description>
+				<label>$ADDON[script.linux.nm 612]</label>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>200</width>
@@ -328,31 +328,15 @@
 				<aligny>center</aligny>
 				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 				<texturefocus border="5">button-focus.png</texturefocus>
-				<onup>9001</onup>
+				<onup>19</onup>
 				<onleft>60</onleft>
 				<onright>10</onright>
-				<ondown>13</ondown>
+				<ondown>14</ondown>
 			</control>
-			<control type="button" id="13">
-				<description>Disconnect button</description>
-				<label>$ADDON[script.linux.nm 612]</label>
-				<posx>0</posx>
-				<posy>40</posy>
-				<width>200</width>
-				<height>41</height>
-				<font>font12_title</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-				<texturefocus border="5">button-focus.png</texturefocus>
-				<onup>14</onup>
-				<onleft>60</onleft>
-				<onright>10</onright>
-				<ondown>11</ondown>
-			</control>
-			<control type="button" id="11">
-				<description>Delete button</description>
-				<label>$ADDON[script.linux.nm 622]</label>
+
+			<control type="button" id="14">
+				<description>Add Connection button</description>
+				<label>$ADDON[script.linux.nm 621]</label>
 				<posx>0</posx>
 				<posy>80</posy>
 				<width>200</width>
@@ -365,13 +349,31 @@
 				<onup>13</onup>
 				<onleft>60</onleft>
 				<onright>10</onright>
+				<ondown>11</ondown>
+			</control>
+			
+			<control type="button" id="11">
+				<description>Delete button</description>
+				<label>$ADDON[script.linux.nm 622]</label>
+				<posx>0</posx>
+				<posy>120</posy>
+				<width>200</width>
+				<height>41</height>
+				<font>font12_title</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<onup>14</onup>
+				<onleft>60</onleft>
+				<onright>10</onright>
 				<ondown>15</ondown>
 			</control>
 			<control type="button" id="15">
 				<description>Check status</description>
 				<label>$ADDON[script.linux.nm 628]</label>
 				<posx>0</posx>
-				<posy>120</posy>
+				<posy>160</posy>
 				<width>200</width>
 				<height>41</height>
 				<font>font12_title</font>
@@ -388,7 +390,7 @@
 				<description>Close Button</description>
 				<visible>true</visible>
 				<posx>0</posx>
-				<posy>200</posy>
+				<posy>240</posy>
 				<width>200</width>
 				<height>41</height>
 				<align>center</align>
