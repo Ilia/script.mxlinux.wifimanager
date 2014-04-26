@@ -15,9 +15,14 @@ sys.path.append (BASE_RESOURCE_PATH)
 print "[SCRIPT] '%s: version %s' initialized!" % (__id__, __version__, )
 
 if (__name__ == "__main__"):
-    import gui
-## To do - chnage name of xml (skins /default)
-    ui = gui.GUI( "script_linux_nm-main.xml" , __cwd__ , "default",msg='', first=True)
-    del ui
+    import qfpynm
+    if not qfpynm.get_all_active_con():
+        import addConnection
+        addConnectionUI = addConnection.GUI("script_linux_nm-add.xml", __cwd__, "default")
+        del addConnectionUI
+    else:
+        import gui
+        ui = gui.GUI( "script_linux_nm-main.xml" , __cwd__ , "default",msg='', first=True)
+        del ui
 
 sys.modules.clear()

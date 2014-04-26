@@ -33,7 +33,7 @@ class GUI(xbmcgui.WindowXMLDialog):
         self.showDialog()
                 
         self.status_label.setLabel(self.msg)
-        self.remove_auto_button.setEnabled(False)
+        #self.remove_auto_button.setEnabled(False)
         #self.disconnect_button.setEnabled(False)
        
         
@@ -46,8 +46,8 @@ class GUI(xbmcgui.WindowXMLDialog):
         self.control_list_id                  = 10
         self.control_add_hidden_button_id     = 11
         self.control_refresh_button_id        = 13
-        self.control_remove_auto_button_id    = 14
-        self.control_install_button_id        = 18
+        # self.control_remove_auto_button_id    = 14
+        # self.control_install_button_id        = 18
         self.control_cancel_button_id         = 19
         self.control_status_label_id          = 100
         
@@ -56,9 +56,9 @@ class GUI(xbmcgui.WindowXMLDialog):
         self.list_label         = self.getControl(self.control_list_label_id)
         self.list               = self.getControl(self.control_list_id)
         self.control_add_hidden_button = self.getControl(self.control_add_hidden_button_id)
-        self.remove_auto_button = self.getControl(self.control_remove_auto_button_id)
+        # self.remove_auto_button = self.getControl(self.control_remove_auto_button_id)
         self.refresh_button  = self.getControl(self.control_refresh_button_id)
-        self.install_button     = self.getControl(self.control_install_button_id)
+        # self.install_button     = self.getControl(self.control_install_button_id)
         self.cancel_button      = self.getControl(self.control_cancel_button_id)
         self.status_label       = self.getControl(self.control_status_label_id)
 
@@ -67,10 +67,10 @@ class GUI(xbmcgui.WindowXMLDialog):
         self.setFocus(self.list )
 
     def closeDialog(self):        
-        import gui
-        mainUI = gui.GUI("script_linux_nm-main.xml", __cwd__, "default",msg=self.msg, first=False)
+        # import gui
+        # mainUI = gui.GUI("script_linux_nm-main.xml", __cwd__, "default",msg=self.msg, first=False)
         self.close()
-        del mainUI
+        # del mainUI
 
     def onClick(self, controlId):
         self.msg = ""

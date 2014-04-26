@@ -85,7 +85,7 @@ class GUI(xbmcgui.WindowXMLDialog):
         self.control_disconnect_button_id     = 13
         self.control_add_connection_button_id = 14
         self.control_status_button_id           = 15       
-        self.control_install_button_id        = 18
+        # self.control_install_button_id        = 18
         self.control_cancel_button_id         = 19
         self.control_status_label_id          = 100
         
@@ -97,16 +97,14 @@ class GUI(xbmcgui.WindowXMLDialog):
         self.control_add_connection_button = self.getControl(self.control_add_connection_button_id)
         self.status_button        = self.getControl(self.control_status_button_id)
         self.disconnect_button  = self.getControl(self.control_disconnect_button_id)
-        self.install_button     = self.getControl(self.control_install_button_id)
+        # self.install_button     = self.getControl(self.control_install_button_id)
         self.cancel_button      = self.getControl(self.control_cancel_button_id)
         self.status_label       = self.getControl(self.control_status_label_id)
 
     def showDialog(self):
         self.updateList()
-        #state,stateTXT = qfpynm.get_nm_state()
-        #msg = stateTXT
-        #self.status_label.setLabel(msg)
-
+        self.checkStatus
+        
     def closeDialog(self):
         self.close()
 
@@ -172,7 +170,7 @@ class GUI(xbmcgui.WindowXMLDialog):
         elif controlId == self.control_add_connection_button_id:
             import addConnection
             addConnectionUI = addConnection.GUI("script_linux_nm-add.xml", __cwd__, "default")
-            self.close()
+            # self.close()
             del addConnectionUI
             
         #disconnect button
@@ -210,15 +208,21 @@ class GUI(xbmcgui.WindowXMLDialog):
         
         #Status button
         elif controlId == self.control_status_button_id:         
-            state,stateTXT = qfpynm.get_nm_state()
-            msg = stateTXT
-            self.status_label.setLabel(msg)
+            self.checkStatus()
+            #state,stateTXT = qfpynm.get_nm_state()
+            #msg = stateTXT
+            #self.status_label.setLabel(msg)
                
         #cancel dialog
         elif controlId == self.control_cancel_button_id:
             self.closeDialog()
 
     
+    def checkStatus(self):
+        state,stateTXT = qfpynm.get_nm_state()
+        msg = stateTXT
+        self.status_label.setLabel(msg)
+
     def onAction(self, action):
         if action in self.action_cancel_dialog:
             self.closeDialog()
